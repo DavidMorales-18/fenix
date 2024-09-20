@@ -3,7 +3,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Importa el CSS
 import uniformImage from '../src/assets/img/uniforme.png';
-import fenix from '../src/assets/img/fenix-sello.png'
+import fenix from '../src/assets/img/fenix-sello.png';
+import backgroundStadium from '../src/assets/img/background-stadium.png'; // Imagen de estadio como fondo
 
 // Configuración del tema oscuro de Material-UI
 const darkTheme = createTheme({
@@ -15,7 +16,14 @@ const darkTheme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <div className="min-h-screen flex flex-col bg-gray-800 text-white">
+      <div 
+        className="min-h-screen flex flex-col text-white"
+        style={{
+          backgroundImage: `url(${backgroundStadium})`, // Fondo del estadio
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <AppBar position="static">
           <Toolbar>
             <Typography variant="h6" sx={{ flexGrow: 1 }}>
@@ -26,7 +34,7 @@ function App() {
           </Toolbar>
         </AppBar>
 
-        {/* Carousel con imágenes con width: 50% */}
+        {/* Carousel con imágenes con width: 50% y fondo opaco */}
         <Carousel
           autoPlay
           interval={3000}
@@ -34,13 +42,12 @@ function App() {
           showThumbs={false}
           showStatus={false}
         >
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }}> {/* Fondo blanco opaco */}
             <img src={uniformImage} alt="Uniforme" style={{ width: '30%', height: 'auto' }} />
             <p className="legend">Uniforme</p>
           </div>
-          {/* Puedes agregar más imágenes al carrusel de esta manera */}
-          <div className="w-full flex justify-center">
-            <img src={fenix} alt="Noticias" style={{ width: '30%', height: 'auto' }} />
+          <div className="w-full flex justify-center" style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }}> {/* Fondo blanco opaco */}
+            <img src={fenix} alt="Noticias" style={{ width: '31%', height: 'auto' }} />
             <p className="legend">Fenix J2</p>
           </div>
         </Carousel>
