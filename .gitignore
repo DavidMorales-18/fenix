@@ -1,31 +1,40 @@
-# Dependencias de Node
+# Node.js / npm
 /node_modules
-/.pnp
-.pnp.js
-
-# Archivos de construcción
-/build
-
-# Archivos de logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+/package-lock.json
+/yarn.lock
 
-# Reportes de errores
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# Archivos de construcción de React
+/build
+/dist
 
-# Archivos de bloqueo
-*.lock
+# Variables de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Sistema operativo
-.DS_Store
-Thumbs.db
+# Logs
+logs
+*.log
+logs/*
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# Directorios de entorno de desarrollo
-/.env.local
-/.env.development.local
-/.env.test.local
-/.env.production.local
+# Directorios temporales
+tmp/
+temp/
+
+# Coverage de pruebas
+/coverage
+
+# Archivos de errores de procesos en Node.js
+npm-error.log
 
 # Editor o IDE
 .vscode/
@@ -33,12 +42,20 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
-# Archivos de configuración local
-*.env
+# Sistema operativo
+.DS_Store
+Thumbs.db
 
-# Configuración de ESLint y Prettier local
+# Configuración de ESLint y Prettier
 .eslintcache
 .prettierignore
+
+# Cache de parcel-bundler
+.cache
+.parcel-cache
+
+# Archivos de bloqueo
+*.lock
 
 # Archivos de ServiceWorker
 workbox-config.js

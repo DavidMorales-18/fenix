@@ -3,7 +3,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Importa el CSS
 import uniformImage from '../src/assets/img/uniforme.png';
-import fenix from '../src/assets/img/fenix-sello.png'
+import fenix from '../src/assets/img/fenixsello.png'
 
 // Configuración del tema oscuro de Material-UI
 const darkTheme = createTheme({
@@ -26,7 +26,7 @@ function App() {
           </Toolbar>
         </AppBar>
 
-        {/* Carousel con imágenes con width: 50% */}
+        {/* 
         <Carousel
           autoPlay
           interval={3000}
@@ -35,15 +35,15 @@ function App() {
           showStatus={false}
         >
           <div className="w-full flex justify-center">
-            <img src={uniformImage} alt="Uniforme" style={{ width: '30%', height: 'auto' }} />
-            <p className="legend">Uniforme</p>
+            <img src={uniformImage} alt="Noticias" style={{ width: '100%', height: 'auto' }} />
+            <p className="legend">Noticia 1</p>
           </div>
-          {/* Puedes agregar más imágenes al carrusel de esta manera */}
+          
           <div className="w-full flex justify-center">
-            <img src={fenix} alt="Noticias" style={{ width: '30%', height: 'auto' }} />
-            <p className="legend">Fenix J2</p>
+            <img src={fenix} alt="Noticias" style={{ width: '50%', height: 'auto' }} />
+            <p className="legend">Noticia 2</p>
           </div>
-        </Carousel>
+        </Carousel> */}
 
         <div className="flex-grow p-4 space-x-4">
           <Paper elevation={3} sx={{ p: 2, flex: 1 }}>
