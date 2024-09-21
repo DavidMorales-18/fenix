@@ -32,7 +32,7 @@ const NavigationBar = () => (
     <Toolbar>
       <Icon />
       <Typography variant="h6" sx={{ flexGrow: 1 }}>
-        Escuela de futbol Fenix
+        Escuela de futbol Fénix
       </Typography>
     </Toolbar>
   </AppBar>
@@ -128,7 +128,7 @@ const Footer = () => (
   <AppBar position="static" color="primary" sx={{ mt: 'auto' }}>
     <Toolbar>
       <Typography variant="body1" sx={{ color: 'inherit' }}>
-        © 2024 Club Deportivo Fenix J2
+        © 2024 Club Deportivo Fénix J2
       </Typography>
     </Toolbar>
   </AppBar>
@@ -204,4 +204,3 @@ const App = () => {
 };
 
 export default App;
-  
